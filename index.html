@@ -6,7 +6,7 @@
     <title>Online Study Courses</title>
     <style>
         body{
-            background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1QgVzS7UlN7KtLkhQjqpyNlooAG1aJNzmlMhGTcZfSmmwjJDJq4tsQ5mZaNK8Ldu9JYU&usqp=CAU") ;
+            /* background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1QgVzS7UlN7KtLkhQjqpyNlooAG1aJNzmlMhGTcZfSmmwjJDJq4tsQ5mZaNK8Ldu9JYU&usqp=CAU") ; */
             background-size: cover;
         }
         .t
@@ -16,11 +16,18 @@
             font-weight: 600;
             margin-top: 10px;
             margin-left: 10px;
+            color: black;
+
+            
         }
         .a
         {
-            border: 10px;
+            background-color: rgb(255, 255, 255);
+            height: 60px;
             margin: 10px;
+            position: sticky;
+            top:0;
+            z-index: 5;
         }
         a{
             font-style: normal;
@@ -28,8 +35,8 @@
         nav{
             float: right;
         }
-        a:link {
-            color:rgb(255, 255, 255);
+        .t:link {
+            /* color:rgb(255, 255, 255); */
             background-color: transparent;
             text-decoration: none;
             font-style: normal;
@@ -38,12 +45,12 @@
             padding: 20px;
         }
 
-        a:visited {
-            color: rgb(255, 255, 255);
+        .t:visited {
+            /* color: rgb(255, 255, 255); */
             background-color: transparent;
             text-decoration: none;
         }
-        a:hover {
+        .t:hover {
             color: rgb(12, 166, 217);
             background-color: transparent;
             text-decoration: none;
@@ -54,11 +61,16 @@
             border-color: black;
             padding: 4px;
         }
+        .b{
+            display:flex;
+            flex-direction: row;
+        }
         .b1{
             position: absolute;
             width: 600px;
             right: 100px;
             top: 200px;
+
         }
         .G{
             display: grid;
@@ -101,13 +113,22 @@
             text-align: center;
             
         }
-        
+        .t1{
+            color: antiquewhite;
+            font-size: small;
+            text-decoration: none;
+        }
+        .b2{
+            padding: 15%;
+            color:rgb(0, 140, 255) ;
+            font-size: 50;
+        }
     </style>
 </head>
 
 <body>
     <div class="a">
-        <img src="https://www.kindpng.com/picc/m/628-6284586_link-to-group-study-name-tag-hd-png.png" width="60px" align ="left">
+        <img src="https://www.kindpng.com/picc/m/628-6284586_link-to-group-study-name-tag-hd-png.png" width="50px" align ="left">
         <div class = "t" style = "float:left"> Study Point</div>
         <nav class="a1">
             <a class="t" href="#home">Home</a>
@@ -115,17 +136,15 @@
             <a class="t" href="#about">About</a>
             <a class="t" href="#blog">Blog</a>
             <a class="t" href="#contact">Contact</a>         
-            <button class="a2"><a href="loginpage.html">Log In</a></button> 
-            <button class="a2"><a href="signuppage.html">Sign In</a></button>  
+            <button class="a2"><a class="t1" href="loginpage.html">Log In</a></button> 
+            <button class="a2"><a class="t1" href="signuppage.html">Sign In</a></button>  
         </nav>
     </div>
     <div class="b">
-        <img class="b1" src="https://static.vecteezy.com/system/resources/previews/006/569/506/original/illustration-girl-with-laptop-sitting-on-the-pouf-at-cozy-home-freelance-or-studying-and-working-at-home-concept-design-female-daily-lifestyle-flat-style-isolated-on-white-background-vector.jpg" alt="">
-        <div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <h1>Learn Courses Online</h1> 
-        </div>
+        <h1 class ="b2" >Learn Courses Online</h1> 
+        <img class="b1" src="s.jpg" alt="">
     </div>
-    <div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div>
         <h1 align="center">Featured Courses</h1>
         <div class="G">
             <div class="g"><a href="https://www.reliablesoft.net/academy/"><img src="data:image/png;base64,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" alt=""></a></div>
@@ -168,7 +187,7 @@
         <h1 align="center">Get Connected With Me</h1>  
         <div class="x">
             <button class="a2">
-                <a class="y" href="www.linkedin.com/in/chetnasrvstv">LinkedIn</a>
+                <a class="y" href="https://www.linkedin.com/in/chetnasrvstv/">LinkedIn</a>
             </button>
             <button class="a2">
                 <a class="y" href="https://github.com/CSrvstv">GitHub</a>
